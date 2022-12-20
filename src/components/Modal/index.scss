@@ -1,0 +1,25 @@
+.modal{
+  position: fixed;
+  inset: 0;
+  opacity: 0.8;
+  background-color: rgb(209, 213, 219);
+  
+}
+
+.modal-body{
+    position: fixed;
+    inset: 40px;
+    padding: 10px;
+    background-color: white;
+    .modal-body_{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        .modal-close{
+            display: flex;
+            justify-content: end;
+        }
+    }
+}
+
