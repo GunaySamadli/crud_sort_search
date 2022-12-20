@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Gunay",
+      "surname": "Semedli",
+      "balance": 22,
+      "cart": "Master",
+      "genderId": 2
+    },
+    {
+      "id": "173a1445-3bb7-4b15-928f-25ef5bf9079e",
+      "name": "Vasif",
+      "surname": "",
+      "cart": "",
+      "balance": 0,
+      "genderId": "1"
+    },
+    {
+      "id": "f98bf3be-f78f-4c07-b50c-ade10336cc58",
+      "name": "Sefa",
+      "surname": "",
+      "cart": "",
+      "balance": 0,
+      "genderId": "2"
+    }
+  ],
+  "gender": [
+    {
+      "id": 1,
+      "name": "Man"
+    },
+    {
+      "id": 2,
+      "name": "Female"
+    }
+  ]
+}

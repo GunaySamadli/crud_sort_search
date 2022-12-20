@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss'
 
-const Modal = ({ actionBar, children, onClose }) => {
+const Modal = ({  children, onClose }) => {
 
   useEffect(() => {
     document.body.classList.add('overflow-hidden');
@@ -19,9 +19,9 @@ const Modal = ({ actionBar, children, onClose }) => {
       <div className='modal-body'>
         <div className='modal-body_'>
           {children}
-          <div className='modal-close'>
+          {/* <div className='modal-close'>
             {actionBar}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

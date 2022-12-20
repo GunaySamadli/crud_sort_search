@@ -1,9 +1,13 @@
+import Table from "./components/Table";
+import UserCreate from "./components/UserCreate";
 import ModalPage from "./pages/ModalPage";
 
 function App() {
   return (
     <div>
-      <ModalPage />
+      {/* <ModalPage /> */}
+      <Table />
+      {/* <UserCreate /> */}
     </div>
   );
 }

@@ -19,7 +19,7 @@ const ModalPage = () => {
     </Modal>;
     return (
         <div className='modal-page' style={{ position: 'relative' }}>
-            <button onClick={handleOpen}  >Open Modal</button>
+            <button onClick={handleOpen}  >Add User</button>
 
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, veritatis, beatae qui facilis enim non ipsam inventore cumque corporis reiciendis officia dignissimos iusto pariatur quaerat velit delectus nam recusandae nisi.
