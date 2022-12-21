@@ -19,14 +19,21 @@ const UserCreate = ({ onClose }) => {
         id: uuid.v4(),
         name: "",
         surname: "",
-        cart: "",
         balance: 0,
+        date: new Date()
     });
 
     const handleChange = (e) => {
-        const { name, value } = e.target
-        setData({ ...data, [name]: value });
-        setCustomRole({ ...customRole, [name]: value })
+        const name = e.target.name;
+        const value = e.target.value;
+        if (name === "genderId") {
+            const value = (parseInt(e.target.value)) || 0;
+            setCustomRole({ ...customRole, [name]: value })
+            setData({ ...data, [name]: value });
+        } else {
+            setCustomRole({ ...customRole, [name]: value })
+            setData({ ...data, [name]: value });
+        }
     }
 
 
@@ -44,13 +51,20 @@ const UserCreate = ({ onClose }) => {
                 <input onChange={handleChange} type="text" name="name" id="name" placeholder='Enter your Name' />
                 <input onChange={handleChange} type="text" name="surname" id="surname" placeholder='Enter your Surname' />
                 <input onChange={handleChange} type="text" name="cart" id="cart" placeholder='Enter your Cart' />
-                <input onChange={handleChange} type="number" name="balance" id="balance" placeholder='Enter your Balance' />
+                <input onChange={handleChange} value={data.balance || ''} type="number" name="balance" id="balance" placeholder='Enter your Balance' />
                 <RadioGroup row aria-labelledby="demo-row-radio-buttons-group-label" name="row-radio-buttons-group">
                     <FormControlLabel onChange={handleChange} name="genderId"
                         value="1" control={<Radio />} label="Man" />
 
                     <FormControlLabel onChange={handleChange} name="genderId"
                         value="2" control={<Radio />} label="Female" />
+                </RadioGroup>
+                <RadioGroup row aria-labelledby="demo-row-radio-buttons-group-label" name="row-radio-buttons-group">
+                    <FormControlLabel onChange={handleChange} name="cart"
+                        value="false" control={<Radio />} label="No cart" />
+
+                    <FormControlLabel onChange={handleChange} name="cart"
+                        value="true" control={<Radio />} label="Yes cart" />
                 </RadioGroup>
                 <button type='submit'>Click</button>
             </form>
