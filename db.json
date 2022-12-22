@@ -1,40 +1,38 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Gunay",
-      "surname": "Semedli",
-      "balance": 22,
-      "cart": true,
-      "genderId": 2,
-      "date": "12/21/2020"
-    },
-    {
-      "id": "c61977f9-a6a6-438b-8644-fd70c6378445",
+      "id": "766efe0d-e3b4-452f-8063-77dcead4f073",
       "name": "Vasif",
       "surname": "",
-      "balance": 0,
-      "date": "2022-12-21T08:08:23.830Z",
+      "balance": 20,
+      "date": "2022-12-22T09:33:10.589Z",
       "genderId": 1,
       "cart": "false"
     },
     {
-      "id": "c61977f9-a6a6-438b-8644-3",
-      "name": "Ali",
-      "surname": "",
-      "balance": 0,
-      "date": "2022-12-21T08:08:23.830Z",
-      "genderId": 1,
-      "cart": "false"
-    },
-    {
-      "id": "fe1b3973-9ae6-4676-8671-d151b18ac90c",
-      "name": "Sefa",
-      "surname": "",
-      "balance": 0,
-      "date": "2022-12-22T09:16:39.050Z",
+      "id": "17a5c5de-1670-4a52-acd2-3667db8cb695",
+      "name": "Gunay ",
+      "surname": "Semedli",
+      "balance": 37,
+      "date": "2022-12-22T09:33:16.229Z",
       "genderId": 2,
       "cart": "true"
+    },
+    {
+      "id": "9177666c-65f5-447c-bca9-31f991482cb8",
+      "name": "Sefa",
+      "surname": "",
+      "balance": 900,
+      "date": "2022-12-22T09:33:45.942Z",
+      "genderId": 2,
+      "cart": "true"
+    },
+    {
+      "id": "43190981-e48a-4bd6-a1c6-ee78a748ba34",
+      "name": "",
+      "surname": "",
+      "balance": 0,
+      "date": "2022-12-22T11:44:26.351Z"
     }
   ],
   "gender": [

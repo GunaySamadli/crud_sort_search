@@ -10,11 +10,12 @@ const TablePage = () => {
         {
             label: "Name",
             render: (user) => user.name,
-            sortValue: (fruit) => fruit.name,
+            sortValue: (user) => user.name,
         },
         {
             label: "Surname",
-            render: (user) => user.surname
+            render: (user) => user.surname,
+            sortValue: (user) =>user.surname,
         },
         {
             label: "Gender",
@@ -22,15 +23,12 @@ const TablePage = () => {
         },
         {
             label: "Balance",
-            render: (user) => user.balance
+            render: (user) => user.balance,
+            sortValue: (user) =>user.balance,
         },
         {
-            label: "Card date",
+            label: "Card",
             render: (user) => user.cart
-        },
-        {
-            label: "Edit",
-            render: (user) => user.edit
         },
         {
             label: "Delete",

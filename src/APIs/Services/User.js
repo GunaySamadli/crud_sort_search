@@ -17,8 +17,8 @@ class UserService extends HttpClient {
         return this.put("users", body, id)
     }
 
-    deleteUser(id, body) {
-        return this.delete("users", body, id)
+    deleteUser(id) {
+        return this.delete("users", id)
     }
 
 }
