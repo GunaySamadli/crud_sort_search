@@ -1,21 +1,21 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { useUsersContext } from '../../context/User';
 import UserCreate from '../UserCreate';
 import './index.scss';
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 
-const Table = ({ config, keyUser }) => {
+const Table = ({ config, data }) => {
 
-    const [{ users, showModal, handleClose, handleOpen }] = useUsersContext();
+
+    const [{ showModal, handleClose, handleOpen }] = useUsersContext();
 
     const renderedHeaders = config.map((column) => {
-        // if (column.header) {
-        //   return <Fragment key={column.label}>{column.header()}</Fragment>;
-        // }
+        if (column.header) {
+            return <Fragment key={column.label}>{column.header()}</Fragment>;
+        }
 
         return <th key={column.label}>{column.label}</th>;
     });
-
 
     const modal = <UserCreate onClose={handleClose} />
 
@@ -30,22 +30,24 @@ const Table = ({ config, keyUser }) => {
                 <thead>
                     <tr className='table-header'>{renderedHeaders}</tr>
                 </thead>
-                <tbody>{users &&
-                    users.map((user) => (
-                        <tr key={user.id}>
-                            <td >{user.name}</td>
-                            <td >{user.surname}</td>
-                            <td >{user.gender}</td>
-                            <td >{user.balance}</td>
-                            <td >{user.cart}</td>
-                            <td ><AiFillEdit /></td>
-                            <td ><AiFillDelete /></td>
-                        </tr>
-                    ))
-                }</tbody>
+                <tbody>
+                    {data &&
+                        data.map((user) => (
+                            <tr key={user.id}>
+                                <td >{user.name}</td>
+                                <td >{user.surname}</td>
+                                <td >{user.gender}</td>
+                                <td >{user.balance}</td>
+                                <td >{user.cart}</td>
+                                <td > <AiFillEdit /></td>
+                                <td ><AiFillDelete /></td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
 
             </table>
-        </div>
+        </div >
 
     )
 

@@ -1,12 +1,16 @@
 import React from 'react';
-import Table from '../components/Table'
+import SortableTable from '../components/SortableTable';
+import { useUsersContext } from '../context/User';
 
 const TablePage = () => {
+
+    const [{ users }] = useUsersContext();
     
     const config = [
         {
             label: "Name",
-            render: (user) => user.name
+            render: (user) => user.name,
+            sortValue: (fruit) => fruit.name,
         },
         {
             label: "Surname",
@@ -34,13 +38,9 @@ const TablePage = () => {
         }
     ];
 
-    const keyUser = (user) => {
-        return user.id
-    }
-
 
     return (
-        <Table keyUser={keyUser} config={config}  />
+        <SortableTable users={users}  config={config} />
     )
 }
 
